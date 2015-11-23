@@ -1,0 +1,4 @@
+Necessary Steps
+0. Configure android_sdk.config to point to your android sdk path
+1. JAVA_HOME must be set in Windows environment variables to valid jdk
+2. must install ant for windows and set it properly in path
