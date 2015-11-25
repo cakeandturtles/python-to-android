@@ -8,7 +8,7 @@ set gradlew=%sdk_path%\tools\templates\gradle\wrapper\gradlew
 set appName=%1
 
 cd %1
-%android% update project -p .
-ant clean
-ant debug
-cd ..
+call %android% update project -p .
+call ant clean
+call ant debug
+call cd ..

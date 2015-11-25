@@ -1,12 +1,12 @@
 from android import Activity, LinearLayout, TextView, Toast
 
 def mainLayout(activity):
-    layout = LinearLayout()
-    layout.orientation = "vertical"
+    layout = LinearLayout(activity)
+    layout.orientation = LinearLayout.VERTICAL
     
-    text = TextView()
+    text = TextView(activity)
     text.text = "Hello, world!"
-    layout.addChild(text)
+    layout.addView(text)
     
     return layout
 
