@@ -1,30 +1,10 @@
 import sys
+from PyProgram import PyProgram
 from PyImport import *
-            
-class PyCode():
-    def __init__(self, src):
-        self.src = src
-        self.statements = []
-        self.parseStatementsFromSrc()
-        
-    def parseStatementsFromSrc(self):
-        lines = self.src.split("\n")
-        for line in lines:
-            #TODO: condense multiple line statements (e.g. \, parens? etc?) to one line
-            #TODO: separate lines by ';' into separate lines
-			
-			#match an import statement
-            if re.match(r'^from ', line) or re.match(r'^import ', line):
-                self.statements.append(PyImport(line))
-                
-            pass
-        
-    def ToJava_src(self):
-        pass
 
 def pyToJava_src(py_src):
-    py_code = PyCode(py_src)
-    return py_code.ToJava_src()
+    py_prog = PyProgram(py_src)
+    return py_prog.ToJava_src()
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
